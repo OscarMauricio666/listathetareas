@@ -1,0 +1,30 @@
+<div class="center">
+    <mat-card>
+        <form class="example-form">
+            <mat-form-field>
+                <input matInput placeholder="Nombre">
+            </mat-form-field><br>
+            <mat-form-field>
+                    <input matInput placeholder="Apellido">
+            </mat-form-field><br>
+            <mat-form-field>
+                    <input matInput placeholder="Email" [formControl]="email" required>
+                    <mat-error *ngIf="email.invalid">
+                        {{ getErrorMessage() }}
+                    </mat-error>
+            </mat-form-field><br>
+            <mat-form-field>
+                    <input matInput placeholder="Contraseña" [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+            </mat-form-field><br>
+            <mat-form-field>
+                    <input matInput placeholder="Repite tu contraseña" [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+            </mat-form-field>
+        </form>
+    </mat-card>
+</div>

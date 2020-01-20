@@ -1,0 +1,21 @@
+<div class="center">    
+    <mat-card>
+        <form>
+            <mat-form-field>
+                    <input matInput placeholder="Email" [formControl]="email" required>
+                    <mat-error *ngIf="email.invalid">
+                        {{ getErrorMessage() }}
+                    </mat-error>
+            </mat-form-field><br>
+            <mat-form-field>
+                    <input matInput placeholder="Contraseña" [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+            </mat-form-field>
+        </form>
+        <a mat-button routerLink="perfil">sigin</a>                           
+        <a mat-button routerLink="index">volver</a>
+    </mat-card>
+    <router-outlet></router-outlet>
+</div>

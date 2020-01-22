@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+// import { ListtaskService } from '../../services/listtask.service';
+
 
 @Component({
   selector: 'app-listtask',
@@ -6,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listtask.component.css']
 })
 export class ListtaskComponent implements OnInit {
+  // listtareas: any[] = [];
+  // loading: boolean;
+  // error: boolean;
+  // ms: string;
+  // constructor( private tareas: ListtaskService ) {
+  //   this.loading = true;
+  //   this.error = false;
 
-  constructor() { }
+  //   this.tareas.getTareas()
+    
+  //  }
 
   ngOnInit() {
   }

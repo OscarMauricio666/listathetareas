@@ -1,7 +1,7 @@
 import { RouterModule, Routes } from '@angular/router';
 import { ListtaskComponent } from './listtask/listtask.component';
 import { TareaComponent } from './tarea/tarea.component';
-import { AddtaskComponent } from './listtask/addtask/addtask.component';
+import { AddtaskComponent } from './addtask/addtask.component';
 
 
 const dashboardRoutes: Routes = [

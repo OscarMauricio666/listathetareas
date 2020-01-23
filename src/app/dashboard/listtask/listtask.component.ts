@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // import { ListtaskService } from '../../services/listtask.service';
+import { MatDialog } from '@angular/material';
+import { AddtaskComponent } from '../addtask/addtask.component';
 
 
 @Component({
@@ -17,10 +19,17 @@ export class ListtaskComponent implements OnInit {
   //   this.error = false;
 
   //   this.tareas.getTareas()
-    
   //  }
+
+  constructor( public dialog: MatDialog) {}
+    addtask() {
+      this.dialog.open(AddtaskComponent);
+    }
+  
 
   ngOnInit() {
   }
+
+
 
 }

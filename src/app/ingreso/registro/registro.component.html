@@ -2,10 +2,10 @@
     <mat-card>
         <form class="example-form">
             <mat-form-field>
-                <input matInput placeholder="Nombre">
+                <input matInput placeholder="Nombre" id="nombre" name="nombre" required>
             </mat-form-field><br>
             <mat-form-field>
-                    <input matInput placeholder="Apellido">
+                    <input matInput placeholder="Apellido" required>
             </mat-form-field><br>
             <mat-form-field>
                     <input matInput placeholder="Email" [formControl]="email" required>
@@ -14,17 +14,21 @@
                     </mat-error>
             </mat-form-field><br>
             <mat-form-field>
+                <input matInput placeholder="NickName" minlength="3" maxlength="30">
+            </mat-form-field><br>
+            <mat-form-field>
                     <input matInput placeholder="Contraseña" [type]="hide ? 'password' : 'text'">
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>
             </mat-form-field><br>
             <mat-form-field>
-                    <input matInput placeholder="Repite tu contraseña" [type]="hide ? 'password' : 'text'">
+                    <input matInput placeholder="Confirma tu contraseña" [type]="hide ? 'password' : 'text'">
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>
-            </mat-form-field>
+            </mat-form-field><br>
+            <button mat-raised-button type="submit" color="primary">Registrase</button>
         </form>
     </mat-card>
 </div>

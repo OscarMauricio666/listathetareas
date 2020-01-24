@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,7 @@ import { FormControl, Validators } from '@angular/forms';
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
 })
-export class RegistroComponent implements OnInit {
+export class RegistroComponent {
 
   hide = true;
 
@@ -19,8 +19,5 @@ export class RegistroComponent implements OnInit {
     this.email.hasError('email') ? 'Correo invalido' : '';
   }
   constructor() { }
-
-  ngOnInit() {
-  }
 
 }

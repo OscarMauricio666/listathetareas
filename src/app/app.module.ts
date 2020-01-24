@@ -10,10 +10,6 @@ import { IngresoModule } from './ingreso/ingreso.module';
 // Ruta principal
 import { ROUTES } from './app.routes';
 
-// import { HttpClientModule } from '@angular/common/http';
-
-
-
 @NgModule({
   declarations: [
     AppComponent
@@ -25,7 +21,6 @@ import { ROUTES } from './app.routes';
     DashboardModule,
     IngresoModule,
     ROUTES
-    // Http
   ],
   providers: [],
   bootstrap: [AppComponent]

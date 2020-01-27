@@ -1,23 +1,23 @@
-<div class="center">
+<div>
     <mat-card>
-        <form class="example-form">
+        <form (ngSubmit)="onSubmit()">
             <mat-form-field>
-                <input matInput placeholder="Nombre" id="nombre" name="nombre" required>
+                <input matInput placeholder="Nombre" id="first_name" name="first_name" [(ngModel)]="model.first_name"  required>
             </mat-form-field><br>
             <mat-form-field>
-                    <input matInput placeholder="Apellido" required>
+                    <input matInput placeholder="Apellido" type="text" id="last_name" name="last_name" [(ngModel)]="model.last_name"  required>
             </mat-form-field><br>
             <mat-form-field>
-                    <input matInput placeholder="Email" [formControl]="email" required>
+                <input matInput placeholder="NickName" id="username" name="username" [(ngModel)]="model.username" minlength="3" maxlength="30">                    
+            </mat-form-field><br>
+            <mat-form-field>
+                <input matInput placeholder="Email" [formControl]="email" type="email" id="email" name="email" [(ngModel)]="model.email" required>
                     <mat-error *ngIf="email.invalid">
                         {{ getErrorMessage() }}
                     </mat-error>
             </mat-form-field><br>
             <mat-form-field>
-                <input matInput placeholder="NickName" minlength="3" maxlength="30">
-            </mat-form-field><br>
-            <mat-form-field>
-                    <input matInput placeholder="Contraseña" [type]="hide ? 'password' : 'text'">
+                    <input matInput placeholder="Contraseña" [type]="hide ? 'password' : 'text'" id="password" name="password" [(ngModel)]="model.password">
                     <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                     </button>

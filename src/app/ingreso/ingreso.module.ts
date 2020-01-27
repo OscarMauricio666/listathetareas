@@ -4,6 +4,7 @@ import { RegistroComponent } from './registro/registro.component';
 import { LoginComponent } from './login/login.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { INGRESO_ROUTES } from './ingreso.routes';
+import { HttpClientModule } from '@angular/common/http';
 
 
 // Material
@@ -30,7 +31,8 @@ import {
     MatButtonModule,
     MatFormFieldModule,
     INGRESO_ROUTES,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
 
   ]
 })

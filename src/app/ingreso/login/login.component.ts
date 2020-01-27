@@ -10,12 +10,12 @@ export class LoginComponent implements OnInit {
 
   email = new FormControl('', [
     Validators.required,
-    Validators.email,    
+    Validators.email,
   ]);
 
   getErrorMessage() {
-    return this.email.hasError('required') ? 'Su Correo' :
-    this.email.hasError('email') ? 'Correo invalido' : '';
+    return this.email.hasError('required') ? ' Tu Email' :
+    this.email.hasError('email') ? 'Email invalido' : '';
   }
 
   constructor() { }

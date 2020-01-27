@@ -1,14 +1,12 @@
-<ol>
-    <li>
+<div>
+    <ng-container>    
         <mat-form-field>
-            <input matInput [(ngModel)]="nombre" placeholder="nombre de la tarea">            
-        </mat-form-field>
-    </li>
-    <li>
+            <input matInput placeholder="Nombre tarea">            
+        </mat-form-field> <br>
         <mat-form-field>
-            <input matInput [(ngModel)]="descripcion" placeholder="descripcion tarea">
-        </mat-form-field>
-    </li>   
-    <button mat-raised-button>add</button>    
-</ol>
-
+            <input matInput placeholder="Descripcion tarea">
+        </mat-form-field> <br>
+        <button mat-raised-button color="primary">add</button>
+    </ng-container>
+    
+</div>

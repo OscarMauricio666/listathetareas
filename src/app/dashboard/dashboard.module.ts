@@ -21,6 +21,6 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     MatIconModule,
     MatDialogModule
-  ],
+  ]
 })
 export class DashboardModule { }

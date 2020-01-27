@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiURL: 'https://jsonplaceholder.typicode.com/'
+  apiURL: 'https://jsonplaceholder.typicode.com/',
+  apiCreateUser: 'http://localhost:8000/api/1.0/create_user/'
 };
 
 /*

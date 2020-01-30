@@ -16,6 +16,8 @@ export class RegistroComponent {
 
   email = new FormControl('', [ Validators.required, Validators.email, ]);
 
+  errorMessage = '';
+
   constructor( private userService: RegistroService) { }
 
   getErrorMessage( ) {
@@ -25,8 +27,7 @@ export class RegistroComponent {
 
   onSubmit() {
     console.log(this.model);
-    this.userService.createUser(this.model).subscribe((response: User) =>  console.log(response) );
-
-  }
+    this.userService.createUser(this.model).subscribe((response: User) =>  console.log(response), (error) => this.errorMessage = error);
+ }
 
 }

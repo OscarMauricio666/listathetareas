@@ -1,6 +1,8 @@
 <div>
     <mat-card>
         <form (ngSubmit)="onSubmit()">
+            <label>Registro</label>
+            <p>{{ errorMessage }}</p>
             <mat-form-field>
                 <input matInput placeholder="Nombre" id="first_name" name="first_name" [(ngModel)]="model.first_name"  required>
             </mat-form-field><br>

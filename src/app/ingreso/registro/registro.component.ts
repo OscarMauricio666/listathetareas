@@ -27,7 +27,11 @@ export class RegistroComponent {
 
   onSubmit() {
     console.log(this.model);
-    this.userService.createUser(this.model).subscribe((response: User) =>  console.log(response), (error) => this.errorMessage = error);
+    this.userService.createUser(this.model)
+    .subscribe((response: User) => { console.log(response); },
+    (error) => this.errorMessage = error,
+    () => { console.log( this.model + 'hola esta es la tercera funcion' ); },
+     );
  }
 
 }
